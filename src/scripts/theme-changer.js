@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (localStorage.getItem('theme') !== 'dark') {
 			localStorage.setItem('theme', 'dark')
 
-			link.setAttribute('href', `../src/styles/${localStorage.getItem('theme')}-theme.css`)
+			link.setAttribute('href', `./src/styles/${localStorage.getItem('theme')}-theme.css`)
 
 			lightTheme.style.boxShadow = ""
 			darkTheme.style.boxShadow = "1px 1px 17px 5px rgba(106, 11, 110, 1)"
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (localStorage.getItem('theme') !== 'light') {
 			localStorage.setItem('theme', 'light')
 
-			link.setAttribute('href', `../src/styles/${localStorage.getItem('theme')}-theme.css`)
+			link.setAttribute('href', `./src/styles/${localStorage.getItem('theme')}-theme.css`)
 
 			darkTheme.style.boxShadow = ""
 			lightTheme.style.boxShadow = "1px 1px 17px 5px rgba(255, 239, 3, 1)"
