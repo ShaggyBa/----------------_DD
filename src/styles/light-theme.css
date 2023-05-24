@@ -1,0 +1,20 @@
+/* Стили для светлой темы */
+
+body {
+	color: #000;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+	background-color: #fff;
+	color: #111;
+}
+
+.item__buy:hover {
+	color: #fff;
+	background: #111;
+}
+
+footer {
+	box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+}

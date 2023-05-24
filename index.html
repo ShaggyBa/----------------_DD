@@ -5,30 +5,119 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="stylesheet" type="text/css" href="./src/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="./src/styles/light-theme.css" id="theme">
 	<title>Товары</title>
 </head>
 
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<h2>Категории мебельных товаров:</h2>
-			<a>
-				<p>Ванная комната</p>
-			</a>
-			<a>
-				<p>Кухня</p>
-			</a>
-			<a>
-				<p>Гостинная</p>
-			</a>
+			<div class="theme-switcher">
+				<button class="light-theme-btn"><img src="./src/icons/002-sun.png" /></button>
+				<button class="dark-theme-btn"><img src="./src/icons/001-moon.png" /></button>
+			</div>
+			<button class="header__burger-btn">
+				<span></span><span></span><span></span>
+			</button>
+			<nav class="menu">
+				<h2>Категории товаров:</h2>
+				<div class="menu__links">
+					<a href="#category1">
+						<p>Категория 1</p>
+					</a>
+
+					<a href="#category2">
+						<p>Категория 2</p>
+					</a>
+
+					<a href="#category3">
+						<p>Категория 3</p>
+					</a>
+
+				</div>
+			</nav>
+
 		</header>
 
-		<div class="container">
-			<main class="main"></main>
+		<div class="backToBegin">
+			<button class="backToBegin__btn">
+				<span></span>
+			</button>
 		</div>
+
+		<div class="container">
+			<main class="main">
+
+				<section class="category" id="category1">
+					<p class="category__title">Категория 1</p>
+					<div class="category__list">
+
+
+					</div>
+				</section>
+
+				<section class="category" id="category2">
+					<p class="category__title">Категория 2</p>
+					<div class="category__list">
+
+					</div>
+				</section>
+
+				<section class="category" id="category3">
+					<p class="category__title">Категория 3</p>
+					<div class="category__list">
+
+					</div>
+				</section>
+
+
+			</main>
+
+			<div class="modal">
+				<form name="modal">
+					<label for="product">Товар:</label>
+					<input type="text" readonly class="product" />
+
+					<label for="quantity">Количество:</label>
+					<input type="number" id="quantity" name="quantity" min="1" required value="1">
+
+					<label>Цвет:</label>
+					<div>
+						<input type="radio" id="red" name="color" value="red">
+						<label for="red">Красный</label>
+					</div>
+					<div>
+						<input type="radio" id="green" name="color" value="green" checked="true">
+						<label for="green">Зеленый</label>
+					</div>
+					<div>
+						<input type="radio" id="blue" name="color" value="blue">
+						<label for="blue">Голубой</label>
+					</div>
+
+					<label for="comment">Комментарий (макс. 2000 символов):</label>
+					<textarea id="comment" name="comment" maxlength="2000"></textarea>
+					<div class="modal__btn-group">
+						<button class="modal__btn-buy" type="submit">Купить</button>
+						<button class="modal__btn-close" type="button">Закрыть</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<footer>
+			<h2>Категории</h2>
+			<ul>
+				<li><a href="#category1">Категория 1</a></li>
+				<li><a href="#category2">Категория 2</a></li>
+				<li><a href="#category3">Категория 3</a></li>
+			</ul>
+		</footer>
 	</div>
-	<script src="./index.js"></script>
+	<script src="./src/scripts/content-loader.js"></script>
+	<script src="./src/scripts/elements.js"></script>
+	<script src="./src/scripts/modal.js"></script>
+	<script src="./src/scripts/theme-changer.js"></script>
 </body>
 
 </html>
