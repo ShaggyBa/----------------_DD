@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const link = document.getElementById('theme')
 
 	if (localStorage.getItem('theme')) {
-		link.setAttribute('href', `../src/styles/${localStorage.getItem('theme')}-theme.css`)
+		link.setAttribute('href', `./src/styles/${localStorage.getItem('theme')}-theme.css`)
 
 		if (localStorage.getItem('theme') === 'light')
 			lightTheme.style.boxShadow = "1px 1px 17px 5px rgba(255, 239, 3, 1)"
